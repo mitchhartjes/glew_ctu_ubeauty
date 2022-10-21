@@ -10,7 +10,7 @@ explore:  glew_shopify_sales_over_time {
     user_attribute: glew_account_id
   }
   label: "Sales Over Time - UBeauty"
-  group_label: "Shopify"
+  group_label: "UBeauty"
   description: "View/Report on your Shopify transaction data on the order and order product level with this explore"
 
   join: dim_glew_accounts {
