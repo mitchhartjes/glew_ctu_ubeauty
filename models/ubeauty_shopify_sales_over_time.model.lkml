@@ -42,4 +42,11 @@ explore:  glew_shopify_sales_over_time {
       and ${dim_shopify_order_tag_map.order_id} = ${fact_shopify_orders.order_id};;
     type:  left_outer
   }
+  join: shopify_order_number {
+    relationship: one_to_one
+    sql_on: ${fact_shopify_orders.glew_account_id} = ${shopify_order_number.glew_account_id}
+      and ${fact_shopify_orders.order_id} = ${shopify_order_number.order_id}
+      and ${fact_shopify_orders.customer_id} = ${shopify_order_number.customer_id};;
+    type:  left_outer
+  }
 }
