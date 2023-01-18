@@ -4,7 +4,7 @@ view: glew_shopify_sales_over_time {
 
   dimension: primary_key {
     type: string
-    sql: CONCAT(${glew_account_id},${order_id}) ;;
+    sql:CONCAT(CONCAT(CAST(${order_id} as VARCHAR), CAST(${glew_account_id} as VARCHAR)),  CAST(${line_item_id} as VARCHAR)) ;;
     primary_key: yes
     hidden: yes
   }
