@@ -22,37 +22,37 @@ view: ub_custom_data {
   }
 
   dimension: custom_attribute_1 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_1 ;;
   }
 
   dimension: custom_attribute_2 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_2 ;;
   }
 
   dimension: custom_attribute_3 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_3 ;;
   }
 
   dimension: custom_attribute_4 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_4 ;;
   }
 
   dimension: custom_attribute_5 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_5 ;;
   }
 
   dimension: custom_attribute_6 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_6 ;;
   }
 
   dimension: custom_attribute_7 {
-    type: number
+    type: string
     sql: ${TABLE}.custom_attribute_7 ;;
   }
 
