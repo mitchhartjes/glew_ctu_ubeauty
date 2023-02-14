@@ -49,4 +49,9 @@ explore:  glew_shopify_sales_over_time {
       and ${fact_shopify_orders.customer_id} = ${shopify_order_number.customer_id};;
     type:  left_outer
   }
+  join: fact_exchange_rates {
+    relationship: one_to_one
+    sql_on: ${fact_exchange_rates.base} = ${dim_glew_accounts.currency}
+      and ${fact_exchange_rates.timestamp_date} = ${fact_shopify_orders.order_date};;
+  }
 }
