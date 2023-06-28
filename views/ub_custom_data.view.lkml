@@ -32,7 +32,7 @@ view: ub_custom_data {
   }
 
   dimension: custom_attribute_3 {
-    type: string
+    type: number
     sql: ${TABLE}.custom_attribute_3 ;;
   }
 
