@@ -78,6 +78,7 @@ view: ub_custom_data {
 
   dimension: total_spend {
     type: number
+    value_format: "0.00"
     sql: ${TABLE}.total_spend ;;
   }
 
