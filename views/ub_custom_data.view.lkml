@@ -1,5 +1,5 @@
 view: ub_custom_data {
-  sql_table_name: custom.ub_custom_data ;;
+  sql_table_name: custom.ubeautyus_custom_table ;;
 
   dimension_group: calendar {
     type: time
