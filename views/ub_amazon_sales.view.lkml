@@ -13,82 +13,82 @@ view: ub_amazon_sales {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.calendar_date ;;
+    sql: ${TABLE}.date ;;
   }
 
-  dimension: channel_name {
-    type: string
-    sql: ${TABLE}.channel_name ;;
-  }
-
-  dimension: custom_attribute_1 {
-    type: string
-    sql: ${TABLE}.custom_attribute_1 ;;
-  }
-
-  dimension: custom_attribute_2 {
-    type: string
-    sql: ${TABLE}.custom_attribute_2 ;;
-  }
-
-  dimension: custom_attribute_3 {
+  dimension: ordered_product_sales {
     type: number
-    sql: ${TABLE}.custom_attribute_3 ;;
+    sql: ${TABLE}.ordered_product_sales ;;
   }
-
-  dimension: custom_attribute_4 {
-    type: string
-    sql: ${TABLE}.custom_attribute_4 ;;
-  }
-
-  dimension: custom_attribute_5 {
-    type: string
-    sql: ${TABLE}.custom_attribute_5 ;;
-  }
-
-  dimension: custom_attribute_6 {
-    type: string
-    sql: ${TABLE}.custom_attribute_6 ;;
-  }
-
-  dimension: custom_attribute_7 {
-    type: string
-    sql: ${TABLE}.custom_attribute_7 ;;
-  }
-
-  dimension: total_clicks {
+  dimension: ordered_product_sales_b2b {
     type: number
-    sql: ${TABLE}.total_clicks ;;
+    sql: ${TABLE}.ordered_product_sales ;;
   }
 
-  dimension: total_conversions {
+  dimension: units_ordered {
     type: number
-    sql: ${TABLE}.total_conversions ;;
+    sql: ${TABLE}.units_ordered ;;
   }
-
-  dimension: total_impressions {
+  dimension: units_ordered_b2b {
     type: number
-    sql: ${TABLE}.total_impressions ;;
+    sql: ${TABLE}.units_ordered_b2b ;;
   }
 
-  dimension: total_revenue {
+  dimension: total_order_items {
     type: number
-    sql: ${TABLE}.total_revenue ;;
+    sql: ${TABLE}.total_order_items ;;
   }
-
-  dimension: total_spend {
+  dimension: total_order_items_b2b {
     type: number
-    value_format: "0.00"
-    sql: ${TABLE}.total_spend ;;
+    sql: ${TABLE}.total_order_items_b2b ;;
   }
 
-  dimension: variable_or_fixed {
-    type: string
-    sql: ${TABLE}.variable_or_fixed ;;
+  dimension: average_sales_per_order_item {
+    type: number
+    sql: ${TABLE}.average_sales_per_order_item ;;
+  }
+  dimension: average_sales_per_order_item_b2b {
+    type: number
+    sql: ${TABLE}.average_sales_per_order_item_b2b ;;
+  }
+  dimension: average_units_per_order_item {
+    type: number
+    sql: ${TABLE}.average_units_per_order_item ;;
+  }
+  dimension: average_units_per_order_item_b2b {
+    type: number
+    sql: ${TABLE}.average_units_per_order_item_b2b ;;
   }
 
-  dimension: vendor_name {
-    type: string
-    sql: ${TABLE}.vendor_name ;;
+  dimension: average_selling_price {
+    type: number
+    sql: ${TABLE}.average_selling_price ;;
+  }
+  dimension: average_selling_price_b2b {
+    type: number
+    sql: ${TABLE}.average_selling_price_b2b ;;
+  }
+
+  dimension: sessions_total {
+    type: number
+    sql: ${TABLE}.sessions_total ;;
+  }
+
+  dimension: sessions_total_b2b {
+    type: number
+    sql: ${TABLE}.sessions_total_b2b ;;
+  }
+  dimension: order_item_session_percentage {
+    type: number
+    sql: ${TABLE}.order_item_session_percentage ;;
+  }
+
+  dimension: order_item_session_percentage_b2b {
+    type: number
+    sql: ${TABLE}.order_item_session_percentage_b2b ;;
+  }
+  dimension: average_offer_count {
+    type: number
+    sql: ${TABLE}.average_offer_count ;;
   }
 }
