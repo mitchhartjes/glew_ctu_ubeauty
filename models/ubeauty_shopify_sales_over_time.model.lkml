@@ -52,7 +52,7 @@ explore:  glew_shopify_sales_over_time {
   join: fact_exchange_rates {
     relationship: one_to_one
     sql_on: ${fact_exchange_rates.base} = ${dim_glew_accounts.currency}
-      and ${fact_exchange_rates.timestamp_date} = ${fact_shopify_orders.order_date};;
+      and ${fact_exchange_rates.timestamp_date} = ${glew_shopify_sales_over_time.timestamp_date};;
   }
   join: fact_shopify_order_items {
     relationship: one_to_one
