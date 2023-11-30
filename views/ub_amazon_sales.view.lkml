@@ -1,5 +1,5 @@
 view: ub_amazon_sales {
-  sql_table_name: custom.ubeautyus_amazon_sales_and_traffic ;;
+  sql_table_name: consumer.custom.ubeautyus_amazon_sales_and_traffic ;;
 
   dimension_group: calendar {
     type: time
