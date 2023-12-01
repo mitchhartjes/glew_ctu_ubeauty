@@ -1,5 +1,5 @@
 view: glew_shopify_sales_over_time {
-  sql_table_name: public.mv_shopify_sales ;;
+  sql_table_name: mv_shopify_sales ;;
   view_label: "Shopify Sales Over Time"
 
   dimension: primary_key {
