@@ -13,9 +13,9 @@ view: ubeautyus_ctu_shopmy {
     type: number
     sql: ${TABLE}.commission_usd ;;
   }
-  dimension: currency {
-    type: string
-    sql: ${TABLE}.currency ;;
+  dimension: new_customer {
+    type: number
+    sql: ${TABLE}.new_customer ;;
   }
   dimension_group: date {
     type: time
@@ -24,25 +24,28 @@ view: ubeautyus_ctu_shopmy {
     datatype: date
     sql: ${TABLE}.date ;;
   }
-  dimension: domain {
-    type: string
-    sql: ${TABLE}.domain ;;
+  dimension_group: fulfillment {
+    type: time
+    timeframes: [raw, date, week, month, quarter, year]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.fulfillment_date ;;
   }
   dimension: name {
     type: string
     sql: ${TABLE}.name ;;
   }
-  dimension: network {
+  dimension: dtc_code {
     type: string
-    sql: ${TABLE}.network ;;
+    sql: ${TABLE}.dtc_code ;;
   }
   dimension: order_amount {
     type: number
     sql: ${TABLE}.order_amount ;;
   }
-  dimension: order_amount_usd {
+  dimension: gross {
     type: number
-    sql: ${TABLE}.order_amount_usd ;;
+    sql: ${TABLE}.gross ;;
   }
   dimension: order_number {
     type: string
