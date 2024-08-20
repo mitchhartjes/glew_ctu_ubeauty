@@ -10,7 +10,7 @@ view: ubeautyus_ctu_shopmy {
     sql: ${TABLE}.commission ;;
   }
   dimension: commission_usd {
-    type: number
+    type: string
     sql: ${TABLE}.commission_usd ;;
   }
   dimension: new_customer {
