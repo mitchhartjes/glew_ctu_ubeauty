@@ -66,4 +66,17 @@ explore:  glew_shopify_sales_over_time {
     sql_on: ${ub_order_tags.order_id} = ${fact_shopify_orders.order_id};;
     type:  left_outer
   }
+  join: fact_shopify_fulfillments {
+    relationship: many_to_one
+    sql_on: ${fact_shopify_fulfillments.glew_account_id} = ${glew_shopify_sales_over_time.glew_account_id}
+      and ${fact_shopify_fulfillments.order_id} = ${glew_shopify_sales_over_time.order_id};;
+    type:  left_outer
+  }
+  join: fact_shopify_fulfillment_items {
+    relationship: one_to_one
+    sql_on: ${glew_shopify_sales_over_time.glew_account_id} = ${fact_shopify_fulfillment_items.glew_account_id}
+      and ${glew_shopify_sales_over_time.order_id} = ${fact_shopify_fulfillment_items.order_id}
+      and ${glew_shopify_sales_over_time.product_id} = ${fact_shopify_fulfillment_items.variant_id};;
+    type:  left_outer
+  }
 }
