@@ -5,7 +5,7 @@ view: ub_order_tags {
   order_id,
   LISTAGG(order_tag, ', ') as tags
 FROM
-  public.dim_shopify_order_tag_map
+  dim_shopify_order_tag_map
 WHERE
   glew_account_id = 19284
 GROUP BY
