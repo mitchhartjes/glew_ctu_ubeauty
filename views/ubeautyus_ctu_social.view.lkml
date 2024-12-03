@@ -24,4 +24,29 @@ view: ubeautyus_ctu_social {
     type: number
     sql: ${TABLE}.tiktok_revenue ;;
   }
+  dimension: field_2 {
+    type: number
+    sql: ${TABLE}.field_2 ;;
+  }
+  dimension: field_3 {
+    type: number
+    sql: ${TABLE}.field_3 ;;
+  }
+  dimension: field_4 {
+    type: number
+    sql: ${TABLE}.field_4 ;;
+  }
+  dimension: field_5 {
+    type: number
+    sql: ${TABLE}.field_5 ;;
+  }
+  dimension: field_6 {
+    type: number
+    sql: ${TABLE}.field_6 ;;
+  }
+  dimension: field_1 {
+    type: date
+    sql: ${TABLE}.field_1 ;;
+  }
+
 }
