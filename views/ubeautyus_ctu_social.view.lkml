@@ -24,29 +24,32 @@ view: ubeautyus_ctu_social {
     type: number
     sql: ${TABLE}.tiktok_revenue ;;
   }
-  dimension: field_2 {
-    type: number
-    sql: ${TABLE}.field_2 ;;
+  dimension_group: ua_date {
+    type: time
+    timeframes: [raw, date, week, month, quarter, year]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.calendar_date ;;
   }
-  dimension: field_3 {
-    type: number
-    sql: ${TABLE}.field_3 ;;
+  dimension: ua_sourcemedium {
+    type: string
+    sql: ${TABLE}.ua_sourcemedium ;;
   }
-  dimension: field_4 {
+  dimension: ua_sessions {
     type: number
-    sql: ${TABLE}.field_4 ;;
+    sql: ${TABLE}.ua_sessions ;;
   }
-  dimension: field_5 {
+  dimension: ua_transactions {
     type: number
-    sql: ${TABLE}.field_5 ;;
+    sql: ${TABLE}.ua_transactions ;;
+  }
+  dimension: ua_revenue {
+    type: number
+    sql: ${TABLE}.ua_revenue ;;
   }
   dimension: field_6 {
     type: number
     sql: ${TABLE}.field_6 ;;
-  }
-  dimension: field_1 {
-    type: date
-    sql: ${TABLE}.field_1 ;;
   }
 
 }
