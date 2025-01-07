@@ -31,25 +31,60 @@ view: ubeautyus_ctu_social {
     datatype: date
     sql: ${TABLE}.calendar_date ;;
   }
-  dimension: ua_sourcemedium {
+  dimension: sourcemedium {
     type: string
-    sql: ${TABLE}.ua_sourcemedium ;;
+    sql: ${TABLE}.sourcemedium ;;
   }
-  dimension: ua_sessions {
+  dimension: sessions {
     type: number
-    sql: ${TABLE}.ua_sessions ;;
+    sql: ${TABLE}.sessions ;;
   }
-  dimension: ua_transactions {
+  dimension: product_checkouts {
     type: number
-    sql: ${TABLE}.ua_transactions ;;
+    sql: ${TABLE}.product_checkouts ;;
   }
-  dimension: ua_revenue {
+  dimension: event_value {
     type: number
-    sql: ${TABLE}.ua_revenue ;;
+    sql: ${TABLE}.event_value ;;
   }
-  dimension: field_6 {
+  dimension: source {
+    type: string
+    sql: ${TABLE}.source ;;
+  }
+  dimension: medium {
+    type: string
+    sql: ${TABLE}.medium ;;
+  }
+  dimension: traffic_type {
+    type: string
+    sql: ${TABLE}.traffic_type ;;
+  }
+  dimension: avg_session_duration {
+    type: string
+    sql: ${TABLE}.avg_session_duration ;;
+  }
+  dimension: users {
     type: number
-    sql: ${TABLE}.field_6 ;;
+    sql: ${TABLE}.users ;;
   }
-
+  dimension: sessions_with_search {
+    type: number
+    sql: ${TABLE}.sessions_with_search ;;
+  }
+  dimension: ecommerce_conversion_rate {
+    type: number
+    sql: ${TABLE}.ecommerce_conversion_rate ;;
+  }
+  dimension: product_adds_to_cart {
+    type: number
+    sql: ${TABLE}.product_adds_to_cart ;;
+  }
+  dimension: product_detail_views {
+    type: number
+    sql: ${TABLE}.product_detail_views ;;
+  }
+  dimension: pages_session {
+    type: number
+    sql: ${TABLE}.pages__session ;;
+  }
 }
