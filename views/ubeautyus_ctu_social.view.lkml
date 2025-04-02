@@ -26,16 +26,19 @@ view: ubeautyus_ctu_social {
   }
 
   dimension: ltk_revenue {
+    label: "LTK Revenue"
     type: number
     sql: ${TABLE}.ltk_revenue ;;
   }
 
   dimension: ltk_comission {
+    label: "LTK Comission"
     type: number
     sql: ${TABLE}.ltk_comission ;;
   }
 
   dimension: ltk_conversion {
+    label: "LTK Conversion"
     type: number
     sql: ${TABLE}.ltk_conversion ;;
   }
