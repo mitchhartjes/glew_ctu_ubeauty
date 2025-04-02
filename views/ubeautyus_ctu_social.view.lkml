@@ -24,6 +24,22 @@ view: ubeautyus_ctu_social {
     type: number
     sql: ${TABLE}.tiktok_revenue ;;
   }
+
+  dimension: ltk_revenue {
+    type: number
+    sql: ${TABLE}.ltk_revenue ;;
+  }
+
+  dimension: ltk_comission {
+    type: number
+    sql: ${TABLE}.ltk_comission ;;
+  }
+
+  dimension: ltk_conversion {
+    type: number
+    sql: ${TABLE}.ltk_conversion ;;
+  }
+
   dimension_group: ua_date {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
