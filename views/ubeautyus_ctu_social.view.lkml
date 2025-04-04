@@ -43,6 +43,12 @@ view: ubeautyus_ctu_social {
     sql: ${TABLE}.ltk_conversion ;;
   }
 
+  dimension: shopmy_support {
+    label: "Shopmy Support"
+    type: number
+    sql: ${TABLE}.shopmy_support ;;
+  }
+
   dimension_group: ua_date {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
