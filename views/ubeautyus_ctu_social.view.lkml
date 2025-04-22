@@ -24,7 +24,23 @@ view: ubeautyus_ctu_social {
     type: number
     sql: ${TABLE}.tiktok_revenue ;;
   }
-
+  dimension_group: ltk_date {
+    type: time
+    label: "LTK"
+    timeframes: [raw, date, week, month, quarter, year]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.ltk_date ;;
+  }
+  dimension: ltk_order_number {
+    type: string
+    sql: ${TABLE}.ltk_order_number ;;
+  }
+  dimension: ltk_gross {
+    label: "LTK Gross"
+    type: number
+    sql: ${TABLE}.ltk_gross ;;
+  }
   dimension: ltk_revenue {
     label: "LTK Revenue"
     type: number
@@ -36,13 +52,18 @@ view: ubeautyus_ctu_social {
     type: number
     sql: ${TABLE}.ltk_comission ;;
   }
-
-  dimension: ltk_conversion {
-    label: "LTK Conversion"
-    type: number
-    sql: ${TABLE}.ltk_conversion ;;
+  dimension_group: ltk_fulfillment_date {
+    type: time
+    label: "LTK Fulfillment"
+    timeframes: [raw, date, week, month, quarter, year]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.ltk_fulfillment_date ;;
   }
-
+  dimension: ltk_customer_type {
+    type: string
+    sql: ${TABLE}.ltk_customer_type ;;
+  }
   dimension: shopmy_support {
     label: "Shopmy Support"
     type: number
