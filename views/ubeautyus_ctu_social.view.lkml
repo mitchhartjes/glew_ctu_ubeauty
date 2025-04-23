@@ -64,6 +64,23 @@ view: ubeautyus_ctu_social {
     type: string
     sql: ${TABLE}.ltk_customer_type ;;
   }
+  dimension_group: opportunity_date {
+    type: time
+    label: "Opportunity"
+    timeframes: [raw, date, week, month, quarter, year]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.opportunity_date ;;
+  }
+  dimension: opportunity_influencer {
+    type: string
+    sql: ${TABLE}.opportunity_influencer ;;
+  }
+  dimension: opportunitys_spend {
+    label: "Opportunities Spend"
+    type: number
+    sql: ${TABLE}.opportunitys_spend ;;
+  }
   dimension: shopmy_support {
     label: "Shopmy Support"
     type: number
