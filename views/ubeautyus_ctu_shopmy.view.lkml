@@ -51,4 +51,8 @@ view: ubeautyus_ctu_shopmy {
     type: string
     sql: ${TABLE}.order_number ;;
   }
+  dimension: country {
+    type: string
+    sql: ${TABLE}.country ;;
+  }
 }
