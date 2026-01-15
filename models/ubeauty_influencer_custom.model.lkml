@@ -22,7 +22,7 @@ join: glew_shopify_sales_over_time {
   type: left_outer
   sql_on: ${shopify_order_number.order_id} = ${glew_shopify_sales_over_time.order_id}
     and ${shopify_order_number.glew_account_id} = ${glew_shopify_sales_over_time.glew_account_id};;
-  relationship: many_to_one
+  relationship: one_to_many
   }
 
 join: fact_shopify_orders {
