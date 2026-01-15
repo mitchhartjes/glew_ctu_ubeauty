@@ -15,7 +15,7 @@ join: ubeautyus_ctu_shopmy {
 join: shopify_order_number {
   type: left_outer
   sql_on: ${ub_custom_data.custom_attribute_1} = ${shopify_order_number.coupon_code} ;;
-  relationship: one_to_many
+  relationship: many_to_many
   }
 
 join: glew_shopify_sales_over_time {
