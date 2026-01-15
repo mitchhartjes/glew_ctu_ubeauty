@@ -29,7 +29,7 @@ join: fact_shopify_orders {
   type: left_outer
   sql_on: ${shopify_order_number.order_id} = ${fact_shopify_orders.order_id}
     and ${shopify_order_number.glew_account_id} = ${fact_shopify_orders.glew_account_id};;
-  relationship: many_to_one
+  relationship: one_to_one
   }
 
 join: fact_shopify_fulfillments {
