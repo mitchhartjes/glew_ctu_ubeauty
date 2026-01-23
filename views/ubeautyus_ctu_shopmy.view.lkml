@@ -55,4 +55,8 @@ view: ubeautyus_ctu_shopmy {
     type: string
     sql: ${TABLE}.country ;;
   }
+  dimension: media_check{
+    type: yesno
+    sql: ${TABLE}.media_check = 1 ;;
+  }
 }
