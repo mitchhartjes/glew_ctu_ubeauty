@@ -66,6 +66,11 @@ explore:  glew_shopify_sales_over_time {
     sql_on: ${ub_order_tags.order_id} = ${fact_shopify_orders.order_id};;
     type:  left_outer
   }
+  join: ub_order_item_tags{
+    relationship: one_to_one
+    sql_on: ${ub_order_item_tags.order_id} = ${glew_shopify_sales_over_time.line_item_id};;
+    type:  left_outer
+  }
   join: fact_shopify_fulfillments {
     relationship: many_to_one
     sql_on: ${fact_shopify_fulfillments.glew_account_id} = ${glew_shopify_sales_over_time.glew_account_id}
