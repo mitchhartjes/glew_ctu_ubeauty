@@ -2,19 +2,25 @@ connection: "silo_routing"
 include: "/**/*.view.lkml"                 # include all views in this project
 include: "//glew_looker_shopify/views/*.view.lkml"
 
-explore: ub_custom_data {
+explore: ub_influencer_list {
   label: "UBeauty Influencer Custom Model"
   group_label: "UBeauty"
 
 join: ubeautyus_ctu_shopmy {
   type: left_outer
-  sql_on: ${ub_custom_data.custom_attribute_2} = ${ubeautyus_ctu_shopmy.name};;
+  sql_on: ${ub_influencer_list.custom_attribute_2} = ${ubeautyus_ctu_shopmy.name};;
   relationship: many_to_one
   }
 
+join: ub_influencer_fixed_fees {
+  type:  left_outer
+  sql_on:  ${ub_influencer_list.custom_attribute_2} = ${ub_influencer_fixed_fees.custom_attribute_2} ;;
+  relationship: many_to_many
+}
+
 join: shopify_order_number {
   type: left_outer
-  sql_on: ${ub_custom_data.custom_attribute_1} = ${shopify_order_number.coupon_code} ;;
+  sql_on: ${ub_influencer_list.custom_attribute_1} = ${shopify_order_number.coupon_code} ;;
   relationship: many_to_many
   }
 
