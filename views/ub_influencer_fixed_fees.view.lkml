@@ -1,7 +1,7 @@
 view: ub_influencer_fixed_fees {
   derived_table: {
     sql: SELECT *
-          FROM custom.ubeautyus_custom_table
+          FROM consumer.custom.ubeautyus_custom_table
           WHERE
           vendor_name = 'Aly - Influencer Fixed Fees Non-Modeled' ;;
   }
