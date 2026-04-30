@@ -31,6 +31,16 @@ view: glew_shopify_sales_over_time {
     sql: ${TABLE}.glew_account_id ;;
   }
 
+  dimension: order_region {
+    type: string
+    description: "Indicates whether the order is US or International"
+    sql: CASE
+          WHEN ${glew_account_id} = 19284 THEN 'US'
+          WHEN ${glew_account_id} = 19708 THEN 'International'
+          ELSE 'Unknown'
+         END ;;
+  }
+
   dimension_group: timestamp {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
