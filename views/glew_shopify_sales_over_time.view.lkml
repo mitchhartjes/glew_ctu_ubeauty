@@ -35,8 +35,8 @@ view: glew_shopify_sales_over_time {
     type: string
     description: "Indicates whether the order is US or International"
     sql: CASE
-          WHEN ${glew_account_id} = 19284 THEN 'US'
-          WHEN ${glew_account_id} = 19708 THEN 'International'
+          WHEN ${glew_account_id} = 19284 THEN 'U Beauty - US'
+          WHEN ${glew_account_id} = 19708 THEN 'U Beauty International'
           ELSE 'Unknown'
          END ;;
   }
