@@ -26,6 +26,17 @@ view: glew_shopify_sales_over_time {
     sql: ${TABLE}.base_product_id ;;
   }
 
+
+  dimension: country {
+    type: string
+    sql: ${TABLE}.country ;;
+  }
+
+  dimension: order_name {
+    type: string
+    sql: ${TABLE}.order_name ;;
+  }
+
   dimension: glew_account_id {
     type: number
     sql: ${TABLE}.glew_account_id ;;
@@ -35,8 +46,8 @@ view: glew_shopify_sales_over_time {
     type: string
     description: "Indicates whether the order is US or International"
     sql: CASE
-          WHEN ${glew_account_id} = 19284 THEN 'U Beauty - US'
-          WHEN ${glew_account_id} = 19708 THEN 'U Beauty International'
+          WHEN ${country} IN ('US', 'CA') THEN 'U Beauty - US'
+          WHEN ${country} IS NOT NULL AND ${country} != '' THEN 'U Beauty International'
           ELSE 'Unknown'
          END ;;
   }
