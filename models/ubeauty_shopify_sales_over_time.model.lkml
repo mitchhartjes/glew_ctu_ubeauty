@@ -5,6 +5,7 @@ include: "//glew_looker_shopify/views/*.view.lkml"
 
 
 explore:  glew_shopify_sales_over_time {
+  sql_always_where: NOT (${glew_shopify_sales_over_time.glew_account_id} = 19284 AND ${glew_shopify_sales_over_time.order_name} LIKE 'UBE%') ;;
   access_filter: {
     field: glew_account_id
     user_attribute: glew_account_id
