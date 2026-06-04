@@ -48,7 +48,6 @@ view: glew_shopify_sales_over_time {
     sql: CASE
           WHEN ${country} IN ('US', 'CA') THEN 'U Beauty - US'
           WHEN ${country} IS NOT NULL AND ${country} != '' THEN 'U Beauty International'
-          ELSE 'Unknown'
          END ;;
   }
 
